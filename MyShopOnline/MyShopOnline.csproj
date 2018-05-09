@@ -18,4 +18,12 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MyShopOnline.Application\MyShopOnline.Application.csproj" />
+    <ProjectReference Include="..\MyShopOnline.Data.EF\MyShopOnline.Data.EF.csproj" />
+    <ProjectReference Include="..\MyShopOnline.Data\MyShopOnline.Data.csproj" />
+    <ProjectReference Include="..\MyShopOnline.Infrastructure\MyShopOnline.Infrastructure.csproj" />
+    <ProjectReference Include="..\MyShopOnline.Utilities\MyShopOnline.Utilities.csproj" />
+  </ItemGroup>
+
 </Project>

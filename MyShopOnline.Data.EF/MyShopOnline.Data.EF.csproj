@@ -4,4 +4,15 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyShopOnline.Data\MyShopOnline.Data.csproj" />
+    <ProjectReference Include="..\MyShopOnline.Infrastructure\MyShopOnline.Infrastructure.csproj" />
+    <ProjectReference Include="..\MyShopOnline.Utilities\MyShopOnline.Utilities.csproj" />
+  </ItemGroup>
+
 </Project>

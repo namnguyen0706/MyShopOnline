@@ -15,6 +15,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShopOnline.Data", "MyShop
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShopOnline.Application", "MyShopOnline.Application\MyShopOnline.Application.csproj", "{CFB6F0E8-A173-4FBC-AB8E-02D6AEF497EB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Presentation", "1.Presentation", "{0B8C5DA9-AC08-4ABE-A8A1-69A9A5F23B30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Application", "2.Application", "{9E6C0E32-9035-44F0-B43F-2D08503F4B6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Domain", "3.Domain", "{874FF46D-33E3-411A-8EF2-42BD2FA291F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Infrastructure", "4.Infrastructure", "{B8034CC4-861E-478B-8898-4DE25B50FB10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +56,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C5C4D1FC-2D59-4A77-B78B-2E0791144AA0} = {0B8C5DA9-AC08-4ABE-A8A1-69A9A5F23B30}
+		{CFA9AAE4-EB14-488C-98CE-FE28C57D3536} = {B8034CC4-861E-478B-8898-4DE25B50FB10}
+		{834A75E7-C7D5-416A-8F59-853F8250F8A7} = {B8034CC4-861E-478B-8898-4DE25B50FB10}
+		{78C3A43C-FD58-4ACF-A007-9214054C9408} = {874FF46D-33E3-411A-8EF2-42BD2FA291F9}
+		{D01BFAE0-4C8A-45A4-89B4-D3612ED8124D} = {874FF46D-33E3-411A-8EF2-42BD2FA291F9}
+		{CFB6F0E8-A173-4FBC-AB8E-02D6AEF497EB} = {9E6C0E32-9035-44F0-B43F-2D08503F4B6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1866A637-494C-49A9-9252-80140CA01DC3}
