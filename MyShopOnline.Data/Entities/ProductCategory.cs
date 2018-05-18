@@ -7,7 +7,7 @@ using System.Text;
 
 namespace MyShopOnline.Data.Entities
 {
-    public class ProductCategory : DomainEntity<int>, IHasSeoMetadata, ISwitchable, ISortable, IDateTracking
+    public class ProductCategory : DomainEntity<int>, IHasSeoMetadata, ISwitchable, ISortTable, IDateTracking
     {
         public ProductCategory()
         {
@@ -35,6 +35,6 @@ namespace MyShopOnline.Data.Entities
         public DateTime DateModified { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
-
+        public int SortOrder { get; set; }
     }
 }
