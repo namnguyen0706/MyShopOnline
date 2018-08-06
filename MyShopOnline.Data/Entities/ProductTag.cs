@@ -7,6 +7,7 @@ using System.Text;
 
 namespace MyShopOnline.Data.Entities
 {
+    [Table("ProductTags")]
     public class ProductTag : DomainEntity<int>
     {
 

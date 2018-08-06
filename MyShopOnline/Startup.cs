@@ -13,6 +13,11 @@ using MyShopOnline.Models;
 using MyShopOnline.Services;
 using MyShopOnline.Data.EF;
 using MyShopOnline.Data.Entities;
+using AutoMapper;
+using MyShopOnline.Data.IRepositories;
+using MyShopOnline.Data.EF.Repositories;
+using MyShopOnline.Application.Interfaces;
+using MyShopOnline.Application.Implementation;
 
 namespace MyShopOnline
 {
@@ -38,8 +43,15 @@ namespace MyShopOnline
             // Add application services.
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
+
+            services.AddSingleton(Mapper.Configuration);
+            services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
+
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddTransient<DbInitializer>();
+
+            services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IProductCategoryService, ProductCategoryService>();
 
             services.AddMvc();
         }
