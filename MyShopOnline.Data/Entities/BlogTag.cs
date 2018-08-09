@@ -1,6 +1,7 @@
 ﻿using MyShopOnline.Infrastructure.SharedKernel;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
@@ -11,6 +12,8 @@ namespace MyShopOnline.Data.Entities
     {
         public int BlogId { set; get; }
 
+        [StringLength(50)]
+        [Column(TypeName = "varchar(50)")]
         public string TagId { set; get; }
 
         [ForeignKey("BlogId")]

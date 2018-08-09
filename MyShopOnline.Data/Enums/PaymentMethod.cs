@@ -4,7 +4,14 @@ using System.Text;
 
 namespace MyShopOnline.Data.Enums
 {
-    public class PaymentMethod
+    public enum PaymentMethod
     {
+        CashOnDelivery,
+        OnlinBanking,
+        PaymentGateway,
+        Visa,
+        MasterCard,
+        PayPal,
+        Atm
     }
 }
