@@ -1,0 +1,594 @@
+2018-08-14T20:49:37.0776379+07:00  [INF] Entity Framework Core "2.0.2-rtm-10011" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=MyShopOnline.Data.EF " (9958f5bb)
+2018-08-14T20:49:38.7054283+07:00  [INF] Executed DbCommand ("222"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRole] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-14T20:49:38.7520704+07:00  [INF] Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUser] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-14T20:49:38.7856824+07:00  [WRN] User "(null)" password validation failed: "PasswordTooShort". (2f223212)
+2018-08-14T20:49:38.9677826+07:00  [INF] Executed DbCommand ("69"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avartar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUser] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-14T20:49:39.3220683+07:00  [ERR] An error occurred while seeding the database (90f98c9f)
+System.AggregateException: One or more errors occurred. (Value cannot be null.
+Parameter name: user) ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: user
+   at Microsoft.AspNetCore.Identity.UserManager`1.<AddToRoleAsync>d__104.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at MyShopOnline.Data.EF.DbInitializer.<Seed>d__4.MoveNext() in C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline.Data.EF\DbInitializer.cs:line 61
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at MyShopOnline.Program.Main(String[] args) in C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\Program.cs:line 22
+---> (Inner Exception #0) System.ArgumentNullException: Value cannot be null.
+Parameter name: user
+   at Microsoft.AspNetCore.Identity.UserManager`1.<AddToRoleAsync>d__104.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at MyShopOnline.Data.EF.DbInitializer.<Seed>d__4.MoveNext() in C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline.Data.EF\DbInitializer.cs:line 61<---
+
+2018-08-14T20:49:39.6357052+07:00 0HLG1TJ3S2KG9:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin   (ca22a1cb)
+2018-08-14T20:49:40.0489411+07:00 0HLG1TJ3S2KG9:00000001 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.HomeController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T20:49:41.8312758+07:00 0HLG1TJ3S2KGC:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin/login   (ca22a1cb)
+2018-08-14T20:49:41.8676055+07:00 0HLG1TJ3S2KGC:00000001 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T20:49:44.7113831+07:00 0HLG1TJ3S2KG9:00000001 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Home/Index.cshtml". (9707eebe)
+2018-08-14T20:49:44.7293083+07:00 0HLG1TJ3S2KGC:00000001 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-14T20:49:45.4347301+07:00 0HLG1TJ3S2KGC:00000001 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" in 3528.177ms (afa2e885)
+2018-08-14T20:49:45.7189527+07:00 0HLG1TJ3S2KGC:00000001 [INF] Request finished in 3715.3044ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T20:49:45.8524412+07:00 0HLG1TJ3S2KGD:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2018-08-14T20:49:45.9116197+07:00 0HLG1TJ3S2KGG:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/controllers/login/index.js   (ca22a1cb)
+2018-08-14T20:49:45.9321979+07:00 0HLG1TJ3S2KGE:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/animate.css/animate.min.css   (ca22a1cb)
+2018-08-14T20:49:45.9430372+07:00 0HLG1TJ3S2KGF:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-08-14T20:49:45.9450975+07:00 0HLG1TJ3S2KGD:00000001 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2018-08-14T20:49:45.9629546+07:00 0HLG1TJ3S2KGF:00000001 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-08-14T20:49:46.2734963+07:00 0HLG1TJ3S2KGD:00000001 [INF] Request finished in 234.8873ms 200 text/css (791a596a)
+2018-08-14T20:49:46.3861432+07:00 0HLG1TJ3S2KGG:00000001 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2018-08-14T20:49:46.4312102+07:00 0HLG1TJ3S2KGE:00000001 [INF] Sending file. Request path: '"/lib/animate.css/animate.min.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\animate.css\animate.min.css"' (27b0a520)
+2018-08-14T20:49:46.6217827+07:00 0HLG1TJ3S2KGH:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/nprogress/nprogress.css   (ca22a1cb)
+2018-08-14T20:49:46.6933383+07:00 0HLG1TJ3S2KG9:00000001 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.HomeController.Index (MyShopOnline)" in 6399.1983ms (afa2e885)
+2018-08-14T20:49:46.8182753+07:00 0HLG1TJ3S2KGJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2018-08-14T20:49:46.8328569+07:00 0HLG1TJ3S2KGE:00000001 [INF] Request finished in 813.1428ms 200 text/css (791a596a)
+2018-08-14T20:49:46.8457050+07:00 0HLG1TJ3S2KGG:00000001 [INF] Request finished in 582.129ms 200 application/javascript (791a596a)
+2018-08-14T20:49:46.8659911+07:00 0HLG1TJ3S2KGI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin-side/css/custom.css   (ca22a1cb)
+2018-08-14T20:49:46.8822904+07:00 0HLG1TJ3S2KG9:00000001 [INF] Request finished in 7133.4204ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T20:49:46.9047001+07:00 0HLG1TJ3S2KGJ:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/notify.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\notifyjs\dist\notify.js"' (27b0a520)
+2018-08-14T20:49:46.9117078+07:00 0HLG1TJ3S2KGH:00000001 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2018-08-14T20:49:46.9605774+07:00 0HLG1TJ3S2KGI:00000001 [INF] Sending file. Request path: '"/admin-side/css/custom.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\admin-side\css\custom.css"' (27b0a520)
+2018-08-14T20:49:46.9660315+07:00 0HLG1TJ3S2KGC:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-08-14T20:49:46.9999458+07:00 0HLG1TJ3S2KGJ:00000001 [INF] Request finished in 353.1935ms 200 application/javascript (791a596a)
+2018-08-14T20:49:47.0165735+07:00 0HLG1TJ3S2KGK:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/shared/app.js   (ca22a1cb)
+2018-08-14T20:49:47.2701899+07:00 0HLG1TJ3S2KGI:00000001 [INF] Request finished in 729.7944ms 200 text/css (791a596a)
+2018-08-14T20:49:47.2760630+07:00 0HLG1TJ3S2KGH:00000001 [INF] Request finished in 744.0607ms 200 text/css (791a596a)
+2018-08-14T20:49:47.2792407+07:00 0HLG1TJ3S2KGK:00000001 [INF] Sending file. Request path: '"/app/shared/app.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\shared\app.js"' (27b0a520)
+2018-08-14T20:49:47.2942503+07:00 0HLG1TJ3S2KGF:00000001 [INF] Request finished in 1431.7019ms 200 application/javascript (791a596a)
+2018-08-14T20:49:47.3361413+07:00 0HLG1TJ3S2KGK:00000001 [INF] Request finished in 399.2274ms 200 application/javascript (791a596a)
+2018-08-14T20:49:47.3555721+07:00 0HLG1TJ3S2KGC:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-08-14T20:49:47.3945684+07:00 0HLG1TJ3S2KGC:00000002 [INF] Request finished in 1557.4156ms 200 text/css (791a596a)
+2018-08-14T20:49:47.5636617+07:00 0HLG1TJ3S2KGD:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2018-08-14T20:49:47.6187013+07:00 0HLG1TJ3S2KGD:00000002 [INF] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2018-08-14T20:49:47.8966235+07:00 0HLG1TJ3S2KGD:00000002 [INF] Request finished in 306.1512ms 200 font/woff2 (791a596a)
+2018-08-14T20:52:24.1064911+07:00 0HLG1TJ3S2KGL:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:44354/admin/login/authen  0 (ca22a1cb)
+2018-08-14T20:52:24.2007430+07:00 0HLG1TJ3S2KGL:00000001 [INF] Antiforgery token validation failed. "The required antiforgery cookie \".AspNetCore.Antiforgery.mm6ybm2fzX4\" is not present." (843d91fe)
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery cookie ".AspNetCore.Antiforgery.mm6ybm2fzX4" is not present.
+   at Microsoft.AspNetCore.Antiforgery.Internal.DefaultAntiforgery.<ValidateRequestAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ValidateAntiforgeryTokenAuthorizationFilter.<OnAuthorizationAsync>d__3.MoveNext()
+2018-08-14T20:52:24.2101826+07:00 0HLG1TJ3S2KGL:00000001 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ValidateAntiforgeryTokenAuthorizationFilter"'. (8b6446cb)
+2018-08-14T20:52:24.2195576+07:00 0HLG1TJ3S2KGL:00000001 [INF] Executing HttpStatusCodeResult, setting HTTP status code 400 (e28ccfae)
+2018-08-14T20:52:24.2238288+07:00 0HLG1TJ3S2KGL:00000001 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" in 40.3729ms (afa2e885)
+2018-08-14T20:52:24.2322224+07:00 0HLG1TJ3S2KGL:00000001 [INF] Request finished in 125.7581ms 400  (791a596a)
+2018-08-14T20:52:46.4680766+07:00 0HLG1TJ3S2KGL:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap/dist/css/bootstrap.css.map   (ca22a1cb)
+2018-08-14T20:52:46.4756962+07:00 0HLG1TJ3S2KGL:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css.map"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map"' (27b0a520)
+2018-08-14T20:52:46.7884984+07:00 0HLG1TJ3S2KGL:00000002 [INF] Request finished in 253.4192ms 200 text/plain (791a596a)
+2018-08-14T20:54:52.7869268+07:00 0HLG1TJ3S2KGM:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin/login   (ca22a1cb)
+2018-08-14T20:54:52.8175001+07:00 0HLG1TJ3S2KGM:00000001 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T20:54:52.8490004+07:00 0HLG1TJ3S2KGM:00000001 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-14T20:54:52.8671018+07:00 0HLG1TJ3S2KGM:00000001 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" in 69.6512ms (afa2e885)
+2018-08-14T20:54:52.8966945+07:00 0HLG1TJ3S2KGM:00000001 [INF] Request finished in 101.3624ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T20:54:53.0135959+07:00 0HLG1TJ3S2KGM:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-08-14T20:54:53.0412569+07:00 0HLG1TJ3S2KGP:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/nprogress/nprogress.css   (ca22a1cb)
+2018-08-14T20:54:53.0433031+07:00 0HLG1TJ3S2KGR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin-side/css/custom.css   (ca22a1cb)
+2018-08-14T20:54:53.0460418+07:00 0HLG1TJ3S2KGM:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-08-14T20:54:53.0941399+07:00 0HLG1TJ3S2KGP:00000001 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2018-08-14T20:54:53.0954386+07:00 0HLG1TJ3S2KGR:00000001 [INF] Sending file. Request path: '"/admin-side/css/custom.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\admin-side\css\custom.css"' (27b0a520)
+2018-08-14T20:54:53.1437279+07:00 0HLG1TJ3S2KGN:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2018-08-14T20:54:53.1568690+07:00 0HLG1TJ3S2KGN:00000001 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2018-08-14T20:54:53.1692572+07:00 0HLG1TJ3S2KGP:00000001 [INF] Request finished in 100.9378ms 200 text/css (791a596a)
+2018-08-14T20:54:53.1783118+07:00 0HLG1TJ3S2KGR:00000001 [INF] Request finished in 120.5564ms 200 text/css (791a596a)
+2018-08-14T20:54:53.1960920+07:00 0HLG1TJ3S2KGM:00000002 [INF] Request finished in 144.6065ms 200 text/css (791a596a)
+2018-08-14T20:54:53.2075625+07:00 0HLG1TJ3S2KGN:00000001 [INF] Request finished in 173.9413ms 200 text/css (791a596a)
+2018-08-14T20:54:53.2344140+07:00 0HLG1TJ3S2KGT:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-08-14T20:54:53.2479011+07:00 0HLG1TJ3S2KGT:00000001 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-08-14T20:54:53.2507569+07:00 0HLG1TJ3S2KGS:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/controllers/login/index.js   (ca22a1cb)
+2018-08-14T20:54:53.2525521+07:00 0HLG1TJ3S2KGO:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/animate.css/animate.min.css   (ca22a1cb)
+2018-08-14T20:54:53.3235145+07:00 0HLG1TJ3S2KGS:00000001 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2018-08-14T20:54:53.3257874+07:00 0HLG1TJ3S2KGO:00000001 [INF] Sending file. Request path: '"/lib/animate.css/animate.min.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\animate.css\animate.min.css"' (27b0a520)
+2018-08-14T20:54:53.4026554+07:00 0HLG1TJ3S2KGQ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2018-08-14T20:54:53.4372780+07:00 0HLG1TJ3S2KGQ:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/notify.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\notifyjs\dist\notify.js"' (27b0a520)
+2018-08-14T20:54:53.4435030+07:00 0HLG1TJ3S2KGT:00000001 [INF] Request finished in 213.2486ms 200 application/javascript (791a596a)
+2018-08-14T20:54:53.4572327+07:00 0HLG1TJ3S2KGO:00000001 [INF] Request finished in 158.8886ms 200 text/css (791a596a)
+2018-08-14T20:54:53.4699471+07:00 0HLG1TJ3S2KGS:00000001 [INF] Request finished in 88.3914ms 200 application/javascript (791a596a)
+2018-08-14T20:54:53.4886398+07:00 0HLG1TJ3S2KGQ:00000001 [INF] Request finished in 220.0706ms 200 application/javascript (791a596a)
+2018-08-14T20:54:53.5075869+07:00 0HLG1TJ3S2KGM:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap/dist/css/bootstrap.css.map   (ca22a1cb)
+2018-08-14T20:54:53.5088570+07:00 0HLG1TJ3S2KGP:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2018-08-14T20:54:53.5362102+07:00 0HLG1TJ3S2KGU:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/shared/app.js   (ca22a1cb)
+2018-08-14T20:54:53.5575333+07:00 0HLG1TJ3S2KGP:00000002 [INF] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2018-08-14T20:54:53.5701259+07:00 0HLG1TJ3S2KGM:00000003 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css.map"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map"' (27b0a520)
+2018-08-14T20:54:53.6004588+07:00 0HLG1TJ3S2KGU:00000001 [INF] Sending file. Request path: '"/app/shared/app.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\shared\app.js"' (27b0a520)
+2018-08-14T20:54:53.8202185+07:00 0HLG1TJ3S2KGU:00000001 [INF] Request finished in 159.2375ms 200 application/javascript (791a596a)
+2018-08-14T20:54:53.8400920+07:00 0HLG1TJ3S2KGP:00000002 [INF] Request finished in 110.8384ms 200 font/woff2 (791a596a)
+2018-08-14T20:54:53.8683346+07:00 0HLG1TJ3S2KGM:00000003 [INF] Request finished in 321.135ms 200 text/plain (791a596a)
+2018-08-14T20:54:54.1967523+07:00 0HLG1TJ3S2KGR:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/__browserLink/requestData/d915cc6a136240178e549e927c8b2e4f?version=2   (ca22a1cb)
+2018-08-14T20:54:54.2466832+07:00 0HLG1TJ3S2KGR:00000002 [INF] Request finished in 11.7984ms 404  (791a596a)
+2018-08-14T20:55:00.8373371+07:00 0HLG1TJ3S2KGN:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44354/admin/login/authen  0 (ca22a1cb)
+2018-08-14T20:55:00.8537223+07:00 0HLG1TJ3S2KGN:00000002 [INF] Antiforgery token validation failed. "The required antiforgery cookie \".AspNetCore.Antiforgery.mm6ybm2fzX4\" is not present." (843d91fe)
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery cookie ".AspNetCore.Antiforgery.mm6ybm2fzX4" is not present.
+   at Microsoft.AspNetCore.Antiforgery.Internal.DefaultAntiforgery.<ValidateRequestAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ValidateAntiforgeryTokenAuthorizationFilter.<OnAuthorizationAsync>d__3.MoveNext()
+2018-08-14T20:55:00.8730134+07:00 0HLG1TJ3S2KGN:00000002 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ValidateAntiforgeryTokenAuthorizationFilter"'. (8b6446cb)
+2018-08-14T20:55:00.8831218+07:00 0HLG1TJ3S2KGN:00000002 [INF] Executing HttpStatusCodeResult, setting HTTP status code 400 (e28ccfae)
+2018-08-14T20:55:00.8925340+07:00 0HLG1TJ3S2KGN:00000002 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" in 43.3428ms (afa2e885)
+2018-08-14T20:55:00.9239334+07:00 0HLG1TJ3S2KGN:00000002 [INF] Request finished in 67.9523ms 400  (791a596a)
+2018-08-14T21:03:37.5297312+07:00  [INF] Entity Framework Core "2.0.2-rtm-10011" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=MyShopOnline.Data.EF " (9958f5bb)
+2018-08-14T21:03:38.0872177+07:00  [INF] Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRole] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-14T21:03:38.1154971+07:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUser] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-14T21:03:38.1471618+07:00  [WRN] User "(null)" password validation failed: "PasswordTooShort". (2f223212)
+2018-08-14T21:03:38.2864592+07:00  [INF] Executed DbCommand ("51"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avartar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUser] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-14T21:03:38.5232486+07:00  [ERR] An error occurred while seeding the database (90f98c9f)
+System.AggregateException: One or more errors occurred. (Value cannot be null.
+Parameter name: user) ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: user
+   at Microsoft.AspNetCore.Identity.UserManager`1.<AddToRoleAsync>d__104.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at MyShopOnline.Data.EF.DbInitializer.<Seed>d__4.MoveNext() in C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline.Data.EF\DbInitializer.cs:line 61
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at MyShopOnline.Program.Main(String[] args) in C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\Program.cs:line 22
+---> (Inner Exception #0) System.ArgumentNullException: Value cannot be null.
+Parameter name: user
+   at Microsoft.AspNetCore.Identity.UserManager`1.<AddToRoleAsync>d__104.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at MyShopOnline.Data.EF.DbInitializer.<Seed>d__4.MoveNext() in C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline.Data.EF\DbInitializer.cs:line 61<---
+
+2018-08-14T21:03:38.8085368+07:00 0HLG1TQTVBK52:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/   (ca22a1cb)
+2018-08-14T21:03:39.2737234+07:00 0HLG1TQTVBK52:00000001 [INF] Executing action method "MyShopOnline.Controllers.HomeController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T21:03:40.6670101+07:00 0HLG1TQTVBK53:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin   (ca22a1cb)
+2018-08-14T21:03:40.7099681+07:00 0HLG1TQTVBK53:00000001 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.HomeController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T21:03:41.7295670+07:00 0HLG1TQTVBK54:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin/login   (ca22a1cb)
+2018-08-14T21:03:41.7579101+07:00 0HLG1TQTVBK54:00000001 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T21:03:44.5693715+07:00 0HLG1TQTVBK54:00000001 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-14T21:03:44.5742936+07:00 0HLG1TQTVBK53:00000001 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Home/Index.cshtml". (9707eebe)
+2018-08-14T21:03:44.6039008+07:00 0HLG1TQTVBK52:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-08-14T21:03:45.0138243+07:00 0HLG1TQTVBK54:00000001 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" in 3224.6424ms (afa2e885)
+2018-08-14T21:03:45.2650629+07:00 0HLG1TQTVBK54:00000001 [INF] Request finished in 3340.9648ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T21:03:45.6829900+07:00 0HLG1TQTVBK54:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/controllers/login/index.js   (ca22a1cb)
+2018-08-14T21:03:45.7783964+07:00 0HLG1TQTVBK54:00000002 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2018-08-14T21:03:46.1932666+07:00 0HLG1TQTVBK54:00000002 [INF] Request finished in 391.8464ms 200 application/javascript (791a596a)
+2018-08-14T21:03:46.2777055+07:00 0HLG1TQTVBK53:00000001 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.HomeController.Index (MyShopOnline)" in 5578.6279ms (afa2e885)
+2018-08-14T21:03:46.3436843+07:00 0HLG1TQTVBK53:00000001 [INF] Request finished in 5664.2586ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T21:03:47.2356503+07:00 0HLG1TQTVBK52:00000001 [INF] Executed action "MyShopOnline.Controllers.HomeController.Index (MyShopOnline)" in 7971.0607ms (afa2e885)
+2018-08-14T21:03:48.0968861+07:00 0HLG1TQTVBK52:00000001 [INF] Request finished in 9303.1616ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T21:03:53.3962628+07:00 0HLG1TQTVBK54:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44354/admin/login/authen  0 (ca22a1cb)
+2018-08-14T21:03:53.5017921+07:00 0HLG1TQTVBK54:00000003 [INF] Antiforgery token validation failed. "The required antiforgery header value \"RequestVerificationToken\" is not present." (843d91fe)
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery header value "RequestVerificationToken" is not present.
+   at Microsoft.AspNetCore.Antiforgery.Internal.DefaultAntiforgery.<ValidateRequestAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ValidateAntiforgeryTokenAuthorizationFilter.<OnAuthorizationAsync>d__3.MoveNext()
+2018-08-14T21:03:53.5162731+07:00 0HLG1TQTVBK54:00000003 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ValidateAntiforgeryTokenAuthorizationFilter"'. (8b6446cb)
+2018-08-14T21:03:53.5341341+07:00 0HLG1TQTVBK54:00000003 [INF] Executing HttpStatusCodeResult, setting HTTP status code 400 (e28ccfae)
+2018-08-14T21:03:53.5484354+07:00 0HLG1TQTVBK54:00000003 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" in 55.3623ms (afa2e885)
+2018-08-14T21:03:53.5643091+07:00 0HLG1TQTVBK54:00000003 [INF] Request finished in 161.2389ms 400  (791a596a)
+2018-08-14T21:03:58.1753813+07:00 0HLG1TQTVBK54:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap/dist/css/bootstrap.css.map   (ca22a1cb)
+2018-08-14T21:03:58.1845395+07:00 0HLG1TQTVBK54:00000004 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css.map"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map"' (27b0a520)
+2018-08-14T21:03:58.2814285+07:00 0HLG1TQTVBK54:00000004 [INF] Request finished in 106.2524ms 200 text/plain (791a596a)
+2018-08-14T21:04:09.4223151+07:00 0HLG1TQTVBK54:00000005 [INF] Request starting HTTP/1.1 POST http://localhost:44354/admin/login/authen  0 (ca22a1cb)
+2018-08-14T21:04:09.4357154+07:00 0HLG1TQTVBK54:00000005 [INF] Antiforgery token validation failed. "The required antiforgery header value \"RequestVerificationToken\" is not present." (843d91fe)
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery header value "RequestVerificationToken" is not present.
+   at Microsoft.AspNetCore.Antiforgery.Internal.DefaultAntiforgery.<ValidateRequestAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ValidateAntiforgeryTokenAuthorizationFilter.<OnAuthorizationAsync>d__3.MoveNext()
+2018-08-14T21:04:09.4409223+07:00 0HLG1TQTVBK54:00000005 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ValidateAntiforgeryTokenAuthorizationFilter"'. (8b6446cb)
+2018-08-14T21:04:09.4453727+07:00 0HLG1TQTVBK54:00000005 [INF] Executing HttpStatusCodeResult, setting HTTP status code 400 (e28ccfae)
+2018-08-14T21:04:09.4492782+07:00 0HLG1TQTVBK54:00000005 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" in 21.6754ms (afa2e885)
+2018-08-14T21:04:09.4627012+07:00 0HLG1TQTVBK54:00000005 [INF] Request finished in 32.3513ms 400  (791a596a)
+2018-08-14T21:09:04.9682325+07:00 0HLG1TQTVBK55:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin/login   (ca22a1cb)
+2018-08-14T21:09:04.9847486+07:00 0HLG1TQTVBK55:00000001 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T21:09:05.0040955+07:00 0HLG1TQTVBK55:00000001 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-14T21:09:05.0206176+07:00 0HLG1TQTVBK55:00000001 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" in 41.882ms (afa2e885)
+2018-08-14T21:09:05.0754822+07:00 0HLG1TQTVBK55:00000001 [INF] Request finished in 78.8898ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T21:09:05.3447735+07:00 0HLG1TQTVBK57:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/animate.css/animate.min.css   (ca22a1cb)
+2018-08-14T21:09:05.3480329+07:00 0HLG1TQTVBK59:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin-side/css/custom.css   (ca22a1cb)
+2018-08-14T21:09:05.3605899+07:00 0HLG1TQTVBK5A:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-08-14T21:09:05.3862480+07:00 0HLG1TQTVBK56:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-08-14T21:09:05.3881573+07:00 0HLG1TQTVBK5B:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/controllers/login/index.js   (ca22a1cb)
+2018-08-14T21:09:05.4051135+07:00 0HLG1TQTVBK5D:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/shared/app.js   (ca22a1cb)
+2018-08-14T21:09:05.4161700+07:00 0HLG1TQTVBK57:00000001 [INF] Sending file. Request path: '"/lib/animate.css/animate.min.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\animate.css\animate.min.css"' (27b0a520)
+2018-08-14T21:09:05.4216954+07:00 0HLG1TQTVBK5C:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2018-08-14T21:09:05.4321066+07:00 0HLG1TQTVBK59:00000001 [INF] Sending file. Request path: '"/admin-side/css/custom.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\admin-side\css\custom.css"' (27b0a520)
+2018-08-14T21:09:05.4471024+07:00 0HLG1TQTVBK5A:00000001 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-08-14T21:09:05.4630087+07:00 0HLG1TQTVBK58:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/nprogress/nprogress.css   (ca22a1cb)
+2018-08-14T21:09:05.4894014+07:00 0HLG1TQTVBK5B:00000001 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2018-08-14T21:09:05.5119382+07:00 0HLG1TQTVBK55:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2018-08-14T21:09:05.5142953+07:00 0HLG1TQTVBK5D:00000001 [INF] Sending file. Request path: '"/app/shared/app.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\shared\app.js"' (27b0a520)
+2018-08-14T21:09:05.5291636+07:00 0HLG1TQTVBK5C:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/notify.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\notifyjs\dist\notify.js"' (27b0a520)
+2018-08-14T21:09:05.5345929+07:00 0HLG1TQTVBK57:00000001 [INF] Request finished in 174.3163ms 200 text/css (791a596a)
+2018-08-14T21:09:05.5581436+07:00 0HLG1TQTVBK56:00000001 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-08-14T21:09:05.6219149+07:00 0HLG1TQTVBK59:00000001 [INF] Request finished in 219.0811ms 200 text/css (791a596a)
+2018-08-14T21:09:05.6236288+07:00 0HLG1TQTVBK5C:00000001 [INF] Request finished in 233.9247ms 200 application/javascript (791a596a)
+2018-08-14T21:09:05.6331633+07:00 0HLG1TQTVBK58:00000001 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2018-08-14T21:09:05.6605863+07:00 0HLG1TQTVBK5D:00000001 [INF] Request finished in 311.5855ms 200 application/javascript (791a596a)
+2018-08-14T21:09:05.7191255+07:00 0HLG1TQTVBK5B:00000001 [INF] Request finished in 327.458ms 200 application/javascript (791a596a)
+2018-08-14T21:09:05.7368851+07:00 0HLG1TQTVBK56:00000001 [INF] Request finished in 494.0227ms 200 text/css (791a596a)
+2018-08-14T21:09:05.7836780+07:00 0HLG1TQTVBK55:00000002 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2018-08-14T21:09:05.8090380+07:00 0HLG1TQTVBK58:00000001 [INF] Request finished in 405.6928ms 200 text/css (791a596a)
+2018-08-14T21:09:05.8475033+07:00 0HLG1TQTVBK55:00000002 [INF] Request finished in 637.7791ms 200 text/css (791a596a)
+2018-08-14T21:09:05.8475859+07:00 0HLG1TQTVBK5A:00000001 [INF] Request finished in 544.0593ms 200 application/javascript (791a596a)
+2018-08-14T21:09:05.9098716+07:00 0HLG1TQTVBK57:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2018-08-14T21:09:05.9204773+07:00 0HLG1TQTVBK57:00000002 [INF] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2018-08-14T21:09:06.0095688+07:00 0HLG1TQTVBK57:00000002 [INF] Request finished in 63.9009ms 200 font/woff2 (791a596a)
+2018-08-14T21:09:06.0325080+07:00 0HLG1TQTVBK59:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap/dist/css/bootstrap.css.map   (ca22a1cb)
+2018-08-14T21:09:06.0901411+07:00 0HLG1TQTVBK59:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css.map"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map"' (27b0a520)
+2018-08-14T21:09:06.2473760+07:00 0HLG1TQTVBK59:00000002 [INF] Request finished in 245.8321ms 200 text/plain (791a596a)
+2018-08-14T21:09:12.4542662+07:00 0HLG1TQTVBK5C:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44354/admin/login/authen  0 (ca22a1cb)
+2018-08-14T21:09:12.5083610+07:00 0HLG1TQTVBK5C:00000002 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" with arguments (["MyShopOnline.Models.AccountViewModels.LoginViewModel"]) - ModelState is Invalid (ba7f4ac2)
+2018-08-14T21:09:12.5461839+07:00 0HLG1TQTVBK5C:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-14T21:09:12.6247958+07:00 0HLG1TQTVBK5C:00000002 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" in 160.4298ms (afa2e885)
+2018-08-14T21:09:12.6322499+07:00 0HLG1TQTVBK5C:00000002 [INF] Request finished in 175.6724ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-14T21:13:18.3004094+07:00  [INF] Entity Framework Core "2.0.2-rtm-10011" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=MyShopOnline.Data.EF " (9958f5bb)
+2018-08-14T21:13:19.3793041+07:00  [INF] Executed DbCommand ("145"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRole] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-14T21:13:19.4150645+07:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUser] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-14T21:13:19.4431379+07:00  [WRN] User "(null)" password validation failed: "PasswordTooShort". (2f223212)
+2018-08-14T21:13:19.6449832+07:00  [INF] Executed DbCommand ("98"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avartar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUser] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-14T21:13:19.9577097+07:00  [ERR] An error occurred while seeding the database (90f98c9f)
+System.AggregateException: One or more errors occurred. (Value cannot be null.
+Parameter name: user) ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: user
+   at Microsoft.AspNetCore.Identity.UserManager`1.<AddToRoleAsync>d__104.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at MyShopOnline.Data.EF.DbInitializer.<Seed>d__4.MoveNext() in C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline.Data.EF\DbInitializer.cs:line 61
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at MyShopOnline.Program.Main(String[] args) in C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\Program.cs:line 22
+---> (Inner Exception #0) System.ArgumentNullException: Value cannot be null.
+Parameter name: user
+   at Microsoft.AspNetCore.Identity.UserManager`1.<AddToRoleAsync>d__104.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at MyShopOnline.Data.EF.DbInitializer.<Seed>d__4.MoveNext() in C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline.Data.EF\DbInitializer.cs:line 61<---
+
+2018-08-14T21:13:20.5086154+07:00 0HLG1U0BA8RRV:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin/login   (ca22a1cb)
+2018-08-14T21:13:20.9763447+07:00 0HLG1U0BA8RRV:00000001 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T21:13:25.8395215+07:00 0HLG1U0BA8RRV:00000001 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-14T21:13:26.1129356+07:00 0HLG1U0BA8RRV:00000001 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" in 5155.6168ms (afa2e885)
+2018-08-14T21:13:26.2392078+07:00 0HLG1U0BA8RRV:00000001 [INF] Request finished in 5663.8263ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T21:13:26.2535532+07:00 0HLG1U0BA8RS1:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/controllers/login/index.js   (ca22a1cb)
+2018-08-14T21:13:26.2794092+07:00 0HLG1U0BA8RRV:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/shared/app.js   (ca22a1cb)
+2018-08-14T21:13:26.3003504+07:00 0HLG1U0BA8RRV:00000002 [INF] Sending file. Request path: '"/app/shared/app.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\shared\app.js"' (27b0a520)
+2018-08-14T21:13:26.3044643+07:00 0HLG1U0BA8RS1:00000001 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2018-08-14T21:13:26.3950432+07:00 0HLG1U0BA8RS1:00000001 [INF] Request finished in 96.9997ms 200 application/javascript (791a596a)
+2018-08-14T21:13:26.4170496+07:00 0HLG1U0BA8RRV:00000002 [INF] Request finished in 57.1755ms 200 application/javascript (791a596a)
+2018-08-14T21:13:27.1017214+07:00 0HLG1U0BA8RRV:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44354/__browserLink/requestData/b547d42e4de54dfcae14d612e9022edd?version=2   (ca22a1cb)
+2018-08-14T21:13:27.1293011+07:00 0HLG1U0BA8RRV:00000003 [INF] Request finished in 23.176ms 404  (791a596a)
+2018-08-14T21:13:33.2398467+07:00 0HLG1U0BA8RS1:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44354/admin/login/authen  0 (ca22a1cb)
+2018-08-14T21:13:33.3563496+07:00 0HLG1U0BA8RS1:00000002 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" with arguments (["MyShopOnline.Models.AccountViewModels.LoginViewModel"]) - ModelState is Invalid (ba7f4ac2)
+2018-08-14T21:13:33.3809560+07:00 0HLG1U0BA8RS1:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-14T21:13:33.4413379+07:00 0HLG1U0BA8RS1:00000002 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" in 141.8701ms (afa2e885)
+2018-08-14T21:13:33.4479727+07:00 0HLG1U0BA8RS1:00000002 [INF] Request finished in 207.3207ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-14T21:13:36.7194337+07:00 0HLG1U0BA8RRV:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap/dist/css/bootstrap.css.map   (ca22a1cb)
+2018-08-14T21:13:36.7297355+07:00 0HLG1U0BA8RRV:00000004 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css.map"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map"' (27b0a520)
+2018-08-14T21:13:36.8487148+07:00 0HLG1U0BA8RRV:00000004 [INF] Request finished in 126.8409ms 200 text/plain (791a596a)
+2018-08-14T21:13:51.7375796+07:00 0HLG1U0BA8RS1:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin/login   (ca22a1cb)
+2018-08-14T21:13:51.7467729+07:00 0HLG1U0BA8RS1:00000003 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T21:13:51.7521666+07:00 0HLG1U0BA8RS1:00000003 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-14T21:13:51.7654861+07:00 0HLG1U0BA8RS1:00000003 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" in 22.6132ms (afa2e885)
+2018-08-14T21:13:51.7838487+07:00 0HLG1U0BA8RS1:00000003 [INF] Request finished in 41.672ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T21:13:51.9612094+07:00 0HLG1U0BA8RS2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/nprogress/nprogress.css   (ca22a1cb)
+2018-08-14T21:13:51.9637200+07:00 0HLG1U0BA8RS3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/animate.css/animate.min.css   (ca22a1cb)
+2018-08-14T21:13:51.9917044+07:00 0HLG1U0BA8RS1:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2018-08-14T21:13:51.9955771+07:00 0HLG1U0BA8RS2:00000001 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2018-08-14T21:13:52.0050923+07:00 0HLG1U0BA8RRV:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-08-14T21:13:52.0162977+07:00 0HLG1U0BA8RS2:00000001 [INF] Request finished in 70.164ms 200 text/css (791a596a)
+2018-08-14T21:13:52.0227335+07:00 0HLG1U0BA8RS1:00000004 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2018-08-14T21:13:52.0329771+07:00 0HLG1U0BA8RS3:00000001 [INF] Sending file. Request path: '"/lib/animate.css/animate.min.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\animate.css\animate.min.css"' (27b0a520)
+2018-08-14T21:13:52.0532170+07:00 0HLG1U0BA8RS1:00000004 [INF] Request finished in 103.5092ms 200 text/css (791a596a)
+2018-08-14T21:13:52.1534839+07:00 0HLG1U0BA8RS6:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2018-08-14T21:13:52.1840136+07:00 0HLG1U0BA8RS5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/controllers/login/index.js   (ca22a1cb)
+2018-08-14T21:13:52.1936173+07:00 0HLG1U0BA8RS7:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/shared/app.js   (ca22a1cb)
+2018-08-14T21:13:52.2011206+07:00 0HLG1U0BA8RS4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin-side/css/custom.css   (ca22a1cb)
+2018-08-14T21:13:52.2019990+07:00 0HLG1U0BA8RS3:00000001 [INF] Request finished in 120.3216ms 200 text/css (791a596a)
+2018-08-14T21:13:52.2092871+07:00 0HLG1U0BA8RS6:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/notify.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\notifyjs\dist\notify.js"' (27b0a520)
+2018-08-14T21:13:52.2138402+07:00 0HLG1U0BA8RS8:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-08-14T21:13:52.2289917+07:00 0HLG1U0BA8RRV:00000005 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-08-14T21:13:52.2308279+07:00 0HLG1U0BA8RS5:00000001 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2018-08-14T21:13:52.2433276+07:00 0HLG1U0BA8RS6:00000001 [INF] Request finished in 120.3284ms 200 application/javascript (791a596a)
+2018-08-14T21:13:52.2494915+07:00 0HLG1U0BA8RS7:00000001 [INF] Sending file. Request path: '"/app/shared/app.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\shared\app.js"' (27b0a520)
+2018-08-14T21:13:52.2694017+07:00 0HLG1U0BA8RS5:00000001 [INF] Request finished in 144.5582ms 200 application/javascript (791a596a)
+2018-08-14T21:13:52.3534921+07:00 0HLG1U0BA8RS8:00000001 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-08-14T21:13:52.3633931+07:00 0HLG1U0BA8RS7:00000001 [INF] Request finished in 210.7649ms 200 application/javascript (791a596a)
+2018-08-14T21:13:52.3645361+07:00 0HLG1U0BA8RRV:00000005 [INF] Request finished in 448.9852ms 200 text/css (791a596a)
+2018-08-14T21:13:52.3955268+07:00 0HLG1U0BA8RS4:00000001 [INF] Sending file. Request path: '"/admin-side/css/custom.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\admin-side\css\custom.css"' (27b0a520)
+2018-08-14T21:13:52.4326368+07:00 0HLG1U0BA8RS8:00000001 [INF] Request finished in 321.1624ms 200 application/javascript (791a596a)
+2018-08-14T21:13:52.4513202+07:00 0HLG1U0BA8RS4:00000001 [INF] Request finished in 385.7432ms 200 text/css (791a596a)
+2018-08-14T21:13:52.4995436+07:00 0HLG1U0BA8RS2:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2018-08-14T21:13:52.5081963+07:00 0HLG1U0BA8RS2:00000002 [INF] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2018-08-14T21:13:52.5499108+07:00 0HLG1U0BA8RS2:00000002 [INF] Request finished in 43.3214ms 200 font/woff2 (791a596a)
+2018-08-14T21:13:52.6177223+07:00 0HLG1U0BA8RS1:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap/dist/css/bootstrap.css.map   (ca22a1cb)
+2018-08-14T21:13:52.6314182+07:00 0HLG1U0BA8RS1:00000005 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css.map"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map"' (27b0a520)
+2018-08-14T21:13:52.8333944+07:00 0HLG1U0BA8RS1:00000005 [INF] Request finished in 246.4616ms 200 text/plain (791a596a)
+2018-08-14T21:13:53.0804496+07:00 0HLG1U0BA8RS3:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/__browserLink/requestData/e2d261d5f89d4a7180568f770843ed9b?version=2   (ca22a1cb)
+2018-08-14T21:13:53.1010166+07:00 0HLG1U0BA8RS3:00000002 [INF] Request finished in 7.3843ms 404  (791a596a)
+2018-08-14T21:14:02.3730414+07:00 0HLG1U0BA8RS6:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44354/admin/login/authen  0 (ca22a1cb)
+2018-08-14T21:14:02.3830985+07:00 0HLG1U0BA8RS6:00000002 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" with arguments (["MyShopOnline.Models.AccountViewModels.LoginViewModel"]) - ModelState is Invalid (ba7f4ac2)
+2018-08-14T21:14:02.3898431+07:00 0HLG1U0BA8RS6:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-14T21:14:02.3969670+07:00 0HLG1U0BA8RS6:00000002 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" in 16.3646ms (afa2e885)
+2018-08-14T21:14:02.4047838+07:00 0HLG1U0BA8RS6:00000002 [INF] Request finished in 29.4118ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-14T21:18:48.9990379+07:00  [INF] Entity Framework Core "2.0.2-rtm-10011" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=MyShopOnline.Data.EF " (9958f5bb)
+2018-08-14T21:18:49.6070457+07:00  [INF] Executed DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRole] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-14T21:18:49.6481801+07:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUser] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-14T21:18:49.6801219+07:00  [WRN] User "(null)" password validation failed: "PasswordTooShort". (2f223212)
+2018-08-14T21:18:49.8920858+07:00  [INF] Executed DbCommand ("94"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avartar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUser] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-14T21:18:50.3113856+07:00  [ERR] An error occurred while seeding the database (90f98c9f)
+System.AggregateException: One or more errors occurred. (Value cannot be null.
+Parameter name: user) ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: user
+   at Microsoft.AspNetCore.Identity.UserManager`1.<AddToRoleAsync>d__104.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at MyShopOnline.Data.EF.DbInitializer.<Seed>d__4.MoveNext() in C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline.Data.EF\DbInitializer.cs:line 61
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at MyShopOnline.Program.Main(String[] args) in C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\Program.cs:line 22
+---> (Inner Exception #0) System.ArgumentNullException: Value cannot be null.
+Parameter name: user
+   at Microsoft.AspNetCore.Identity.UserManager`1.<AddToRoleAsync>d__104.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at MyShopOnline.Data.EF.DbInitializer.<Seed>d__4.MoveNext() in C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline.Data.EF\DbInitializer.cs:line 61<---
+
+2018-08-14T21:18:50.8702188+07:00 0HLG1U3DOI7J0:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/   (ca22a1cb)
+2018-08-14T21:18:51.4784578+07:00 0HLG1U3DOI7J0:00000001 [INF] Executing action method "MyShopOnline.Controllers.HomeController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T21:18:56.8807835+07:00 0HLG1U3DOI7J0:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-08-14T21:18:58.1172829+07:00 0HLG1U3DOI7J0:00000001 [INF] Executed action "MyShopOnline.Controllers.HomeController.Index (MyShopOnline)" in 6704.7123ms (afa2e885)
+2018-08-14T21:18:58.1852481+07:00 0HLG1U3DOI7J0:00000001 [INF] Request finished in 7316.4246ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T21:18:58.2636958+07:00 0HLG1U3DOI7J2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/images/banner2.svg   (ca22a1cb)
+2018-08-14T21:18:58.2679123+07:00 0HLG1U3DOI7J0:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/css/site.css   (ca22a1cb)
+2018-08-14T21:18:58.2889271+07:00 0HLG1U3DOI7J1:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/images/banner1.svg   (ca22a1cb)
+2018-08-14T21:18:58.2941532+07:00 0HLG1U3DOI7J0:00000002 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\css\site.css"' (27b0a520)
+2018-08-14T21:18:58.3065097+07:00 0HLG1U3DOI7J2:00000001 [INF] Sending file. Request path: '"/images/banner2.svg"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\images\banner2.svg"' (27b0a520)
+2018-08-14T21:18:58.3304512+07:00 0HLG1U3DOI7J1:00000001 [INF] Sending file. Request path: '"/images/banner1.svg"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\images\banner1.svg"' (27b0a520)
+2018-08-14T21:18:58.4167430+07:00 0HLG1U3DOI7J2:00000001 [INF] Request finished in 103.6721ms 200 image/svg+xml (791a596a)
+2018-08-14T21:18:58.4589578+07:00 0HLG1U3DOI7J0:00000002 [INF] Request finished in 105.9005ms 200 text/css (791a596a)
+2018-08-14T21:18:58.4678991+07:00 0HLG1U3DOI7J1:00000001 [INF] Request finished in 180.3212ms 200 image/svg+xml (791a596a)
+2018-08-14T21:18:58.6425448+07:00 0HLG1U3DOI7J1:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap/dist/js/bootstrap.js   (ca22a1cb)
+2018-08-14T21:18:58.6474100+07:00 0HLG1U3DOI7J2:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/images/banner3.svg   (ca22a1cb)
+2018-08-14T21:18:58.6714657+07:00 0HLG1U3DOI7J0:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44354/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA   (ca22a1cb)
+2018-08-14T21:18:58.6839799+07:00 0HLG1U3DOI7J1:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap\dist\js\bootstrap.js"' (27b0a520)
+2018-08-14T21:18:58.6867595+07:00 0HLG1U3DOI7J3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/images/banner4.svg   (ca22a1cb)
+2018-08-14T21:18:58.7118587+07:00 0HLG1U3DOI7J2:00000002 [INF] Sending file. Request path: '"/images/banner3.svg"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\images\banner3.svg"' (27b0a520)
+2018-08-14T21:18:58.7449293+07:00 0HLG1U3DOI7J0:00000003 [INF] Sending file. Request path: '"/js/site.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\js\site.js"' (27b0a520)
+2018-08-14T21:18:58.7876837+07:00 0HLG1U3DOI7J3:00000001 [INF] Sending file. Request path: '"/images/banner4.svg"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\images\banner4.svg"' (27b0a520)
+2018-08-14T21:18:58.7985948+07:00 0HLG1U3DOI7J1:00000002 [INF] Request finished in 195.657ms 200 application/javascript (791a596a)
+2018-08-14T21:18:58.8242327+07:00 0HLG1U3DOI7J2:00000002 [INF] Request finished in 172.5511ms 200 image/svg+xml (791a596a)
+2018-08-14T21:18:58.8481290+07:00 0HLG1U3DOI7J0:00000003 [INF] Request finished in 213.1271ms 200 application/javascript (791a596a)
+2018-08-14T21:18:58.8661182+07:00 0HLG1U3DOI7J3:00000001 [INF] Request finished in 236.127ms 200 image/svg+xml (791a596a)
+2018-08-14T21:18:59.3758916+07:00 0HLG1U3DOI7J2:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2018-08-14T21:18:59.3840021+07:00 0HLG1U3DOI7J2:00000003 [INF] Sending file. Request path: '"/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"' (27b0a520)
+2018-08-14T21:18:59.4103212+07:00 0HLG1U3DOI7J2:00000003 [INF] Request finished in 31.1073ms 200 font/woff2 (791a596a)
+2018-08-14T21:19:01.0785167+07:00 0HLG1U3DOI7J1:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44354/__browserLink/requestData/0e9d564f3213434bb9d3d146ac14feca?version=2   (ca22a1cb)
+2018-08-14T21:19:01.1051146+07:00 0HLG1U3DOI7J1:00000003 [INF] Request finished in 19.0699ms 404  (791a596a)
+2018-08-14T21:19:17.3518111+07:00 0HLG1U3DOI7J0:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin   (ca22a1cb)
+2018-08-14T21:19:17.3617779+07:00 0HLG1U3DOI7J0:00000004 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.HomeController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T21:19:17.9934595+07:00 0HLG1U3DOI7J0:00000004 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Home/Index.cshtml". (9707eebe)
+2018-08-14T21:19:18.4156106+07:00 0HLG1U3DOI7J0:00000004 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.HomeController.Index (MyShopOnline)" in 1051.4182ms (afa2e885)
+2018-08-14T21:19:18.4514938+07:00 0HLG1U3DOI7J0:00000004 [INF] Request finished in 1087.4263ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T21:19:18.6638033+07:00 0HLG1U3DOI7J2:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap-daterangepicker/daterangepicker.css   (ca22a1cb)
+2018-08-14T21:19:18.6751181+07:00 0HLG1U3DOI7J0:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/fastclick/lib/fastclick.js   (ca22a1cb)
+2018-08-14T21:19:18.6893434+07:00 0HLG1U3DOI7J1:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/nprogress/nprogress.js   (ca22a1cb)
+2018-08-14T21:19:18.6922457+07:00 0HLG1U3DOI7J3:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin-side/images/img.jpg   (ca22a1cb)
+2018-08-14T21:19:18.7081246+07:00 0HLG1U3DOI7J8:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/shared/app.js   (ca22a1cb)
+2018-08-14T21:19:18.7144796+07:00 0HLG1U3DOI7J4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/chart.js/dist/Chart.js   (ca22a1cb)
+2018-08-14T21:19:18.7239731+07:00 0HLG1U3DOI7J6:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap-daterangepicker/daterangepicker.js   (ca22a1cb)
+2018-08-14T21:19:18.7267652+07:00 0HLG1U3DOI7J2:00000004 [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.css"' (27b0a520)
+2018-08-14T21:19:18.7301952+07:00 0HLG1U3DOI7J0:00000005 [INF] Sending file. Request path: '"/lib/fastclick/lib/fastclick.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\fastclick\lib\fastclick.js"' (27b0a520)
+2018-08-14T21:19:18.7349373+07:00 0HLG1U3DOI7J5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootbox/bootbox.js   (ca22a1cb)
+2018-08-14T21:19:18.7380008+07:00 0HLG1U3DOI7J7:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/jquery-sparkline/jquery.sparkline.js   (ca22a1cb)
+2018-08-14T21:19:18.7550467+07:00 0HLG1U3DOI7J1:00000004 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\nprogress\nprogress.js"' (27b0a520)
+2018-08-14T21:19:18.8033834+07:00 0HLG1U3DOI7J9:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin-side/js/custom.js   (ca22a1cb)
+2018-08-14T21:19:18.8667935+07:00 0HLG1U3DOI7J8:00000001 [INF] Sending file. Request path: '"/app/shared/app.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\shared\app.js"' (27b0a520)
+2018-08-14T21:19:18.8841392+07:00 0HLG1U3DOI7J2:00000004 [INF] Request finished in 189.8117ms 200 text/css (791a596a)
+2018-08-14T21:19:18.9004931+07:00 0HLG1U3DOI7J1:00000004 [INF] Request finished in 246.2747ms 200 application/javascript (791a596a)
+2018-08-14T21:19:18.9046044+07:00 0HLG1U3DOI7J7:00000001 [INF] Sending file. Request path: '"/lib/jquery-sparkline/jquery.sparkline.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\jquery-sparkline\jquery.sparkline.js"' (27b0a520)
+2018-08-14T21:19:18.9282170+07:00 0HLG1U3DOI7J4:00000001 [INF] Sending file. Request path: '"/lib/chart.js/dist/Chart.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\chart.js\dist\Chart.js"' (27b0a520)
+2018-08-14T21:19:19.0042551+07:00 0HLG1U3DOI7J6:00000001 [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.js"' (27b0a520)
+2018-08-14T21:19:19.1345402+07:00 0HLG1U3DOI7J3:00000002 [INF] Sending file. Request path: '"/admin-side/images/img.jpg"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\admin-side\images\img.jpg"' (27b0a520)
+2018-08-14T21:19:19.1679965+07:00 0HLG1U3DOI7J9:00000001 [INF] Sending file. Request path: '"/admin-side/js/custom.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\admin-side\js\custom.js"' (27b0a520)
+2018-08-14T21:19:19.1746543+07:00 0HLG1U3DOI7J0:00000005 [INF] Request finished in 245.4793ms 200 application/javascript (791a596a)
+2018-08-14T21:19:19.1806673+07:00 0HLG1U3DOI7JA:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/moment/moment.js   (ca22a1cb)
+2018-08-14T21:19:19.1875543+07:00 0HLG1U3DOI7J5:00000001 [INF] Sending file. Request path: '"/lib/bootbox/bootbox.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootbox\bootbox.js"' (27b0a520)
+2018-08-14T21:19:19.2148395+07:00 0HLG1U3DOI7J8:00000001 [INF] Request finished in 284.0451ms 200 application/javascript (791a596a)
+2018-08-14T21:19:19.2407255+07:00 0HLG1U3DOI7J7:00000001 [INF] Request finished in 449.9067ms 200 application/javascript (791a596a)
+2018-08-14T21:19:19.2796560+07:00 0HLG1U3DOI7JA:00000001 [INF] Sending file. Request path: '"/lib/moment/moment.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\moment\moment.js"' (27b0a520)
+2018-08-14T21:19:19.3050237+07:00 0HLG1U3DOI7J4:00000001 [INF] Request finished in 676.6442ms 200 application/javascript (791a596a)
+2018-08-14T21:19:19.5516785+07:00 0HLG1U3DOI7J6:00000001 [INF] Request finished in 493.3239ms 200 application/javascript (791a596a)
+2018-08-14T21:19:19.5759776+07:00 0HLG1U3DOI7J5:00000001 [INF] Request finished in 692.0193ms 200 application/javascript (791a596a)
+2018-08-14T21:19:19.5857349+07:00 0HLG1U3DOI7J9:00000001 [INF] Request finished in 763.314ms 200 application/javascript (791a596a)
+2018-08-14T21:19:19.5998597+07:00 0HLG1U3DOI7JA:00000001 [INF] Request finished in 772.583ms 200 application/javascript (791a596a)
+2018-08-14T21:19:19.6323906+07:00 0HLG1U3DOI7J3:00000002 [INF] Request finished in 907.7033ms 200 image/jpeg (791a596a)
+2018-08-14T21:19:20.0889052+07:00 0HLG1U3DOI7J2:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44354/__browserLink/requestData/59dcf927c12844ef9dc57274ac336621?version=2   (ca22a1cb)
+2018-08-14T21:19:20.1204184+07:00 0HLG1U3DOI7J2:00000005 [INF] Request finished in 8.9165ms 404  (791a596a)
+2018-08-14T21:19:23.2849800+07:00 0HLG1U3DOI7J0:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin/login   (ca22a1cb)
+2018-08-14T21:19:23.3068608+07:00 0HLG1U3DOI7J0:00000006 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T21:19:23.5271204+07:00 0HLG1U3DOI7J0:00000006 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-14T21:19:23.5817040+07:00 0HLG1U3DOI7J0:00000006 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" in 288.1559ms (afa2e885)
+2018-08-14T21:19:23.6097295+07:00 0HLG1U3DOI7J0:00000006 [INF] Request finished in 303.9211ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T21:19:23.6719198+07:00 0HLG1U3DOI7J1:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/controllers/login/index.js   (ca22a1cb)
+2018-08-14T21:19:23.6812623+07:00 0HLG1U3DOI7J1:00000005 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2018-08-14T21:19:23.6969758+07:00 0HLG1U3DOI7J1:00000005 [INF] Request finished in 24.5504ms 200 application/javascript (791a596a)
+2018-08-14T21:19:29.6911308+07:00 0HLG1U3DOI7J8:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44354/admin/login/authen  0 (ca22a1cb)
+2018-08-14T21:19:29.7978943+07:00 0HLG1U3DOI7J8:00000002 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" with arguments (["MyShopOnline.Models.AccountViewModels.LoginViewModel"]) - ModelState is Invalid (ba7f4ac2)
+2018-08-14T21:19:29.8234390+07:00 0HLG1U3DOI7J8:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-14T21:19:29.9012868+07:00 0HLG1U3DOI7J8:00000002 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" in 144.742ms (afa2e885)
+2018-08-14T21:19:29.9090240+07:00 0HLG1U3DOI7J8:00000002 [INF] Request finished in 217.3231ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-14T21:19:33.1382139+07:00 0HLG1U3DOI7J7:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap/dist/css/bootstrap.css.map   (ca22a1cb)
+2018-08-14T21:19:33.1450308+07:00 0HLG1U3DOI7J7:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css.map"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map"' (27b0a520)
+2018-08-14T21:19:33.2260469+07:00 0HLG1U3DOI7J7:00000002 [INF] Request finished in 87.4776ms 200 text/plain (791a596a)
+2018-08-14T21:24:20.1548874+07:00  [INF] Entity Framework Core "2.0.2-rtm-10011" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=MyShopOnline.Data.EF " (9958f5bb)
+2018-08-14T21:24:21.6511206+07:00  [INF] Executed DbCommand ("120"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRole] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-14T21:24:21.6948825+07:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUser] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-14T21:24:21.7242891+07:00  [WRN] User "(null)" password validation failed: "PasswordTooShort". (2f223212)
+2018-08-14T21:24:21.8995450+07:00  [INF] Executed DbCommand ("77"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avartar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUser] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-14T21:24:22.2303605+07:00  [ERR] An error occurred while seeding the database (90f98c9f)
+System.AggregateException: One or more errors occurred. (Value cannot be null.
+Parameter name: user) ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: user
+   at Microsoft.AspNetCore.Identity.UserManager`1.<AddToRoleAsync>d__104.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at MyShopOnline.Data.EF.DbInitializer.<Seed>d__4.MoveNext() in C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline.Data.EF\DbInitializer.cs:line 61
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at MyShopOnline.Program.Main(String[] args) in C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\Program.cs:line 22
+---> (Inner Exception #0) System.ArgumentNullException: Value cannot be null.
+Parameter name: user
+   at Microsoft.AspNetCore.Identity.UserManager`1.<AddToRoleAsync>d__104.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at MyShopOnline.Data.EF.DbInitializer.<Seed>d__4.MoveNext() in C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline.Data.EF\DbInitializer.cs:line 61<---
+
+2018-08-14T21:24:22.9071338+07:00 0HLG1U6GMRRHA:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/   (ca22a1cb)
+2018-08-14T21:24:23.4929323+07:00 0HLG1U6GMRRHA:00000001 [INF] Executing action method "MyShopOnline.Controllers.HomeController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T21:24:29.2644792+07:00 0HLG1U6GMRRHA:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-08-14T21:24:30.7435018+07:00 0HLG1U6GMRRHA:00000001 [INF] Executed action "MyShopOnline.Controllers.HomeController.Index (MyShopOnline)" in 7259.5215ms (afa2e885)
+2018-08-14T21:24:30.8162578+07:00 0HLG1U6GMRRHA:00000001 [INF] Request finished in 7940.6734ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T21:24:32.3948747+07:00 0HLG1U6GMRRHA:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/__browserLink/requestData/99f4fef1f80b44dbbc681c91cec94f0c?version=2   (ca22a1cb)
+2018-08-14T21:24:32.4532535+07:00 0HLG1U6GMRRHA:00000002 [INF] Request finished in 24.4029ms 404  (791a596a)
+2018-08-14T21:24:35.8792278+07:00 0HLG1U6GMRRHA:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin/login   (ca22a1cb)
+2018-08-14T21:24:35.8946803+07:00 0HLG1U6GMRRHA:00000003 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T21:24:36.4085303+07:00 0HLG1U6GMRRHA:00000003 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-14T21:24:36.4698214+07:00 0HLG1U6GMRRHA:00000003 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" in 581.2955ms (afa2e885)
+2018-08-14T21:24:36.5634680+07:00 0HLG1U6GMRRHA:00000003 [INF] Request finished in 602.5771ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T21:24:36.6096666+07:00 0HLG1U6GMRRHC:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/shared/app.js   (ca22a1cb)
+2018-08-14T21:24:36.6363809+07:00 0HLG1U6GMRRHA:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/controllers/login/index.js   (ca22a1cb)
+2018-08-14T21:24:36.6549367+07:00 0HLG1U6GMRRHC:00000001 [INF] Sending file. Request path: '"/app/shared/app.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\shared\app.js"' (27b0a520)
+2018-08-14T21:24:36.6641767+07:00 0HLG1U6GMRRHA:00000004 [INF] The file "/app/controllers/login/index.js" was not modified (f1f8d725)
+2018-08-14T21:24:36.7653886+07:00 0HLG1U6GMRRHC:00000001 [INF] Request finished in 108.2803ms 200 application/javascript (791a596a)
+2018-08-14T21:24:36.8109996+07:00 0HLG1U6GMRRHA:00000004 [INF] Request finished in 196.6949ms 304 application/javascript (791a596a)
+2018-08-14T21:24:46.4566049+07:00 0HLG1U6GMRRHC:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44354/admin/login/authen  0 (ca22a1cb)
+2018-08-14T21:24:46.5760220+07:00 0HLG1U6GMRRHC:00000002 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" with arguments (["MyShopOnline.Models.AccountViewModels.LoginViewModel"]) - ModelState is Invalid (ba7f4ac2)
+2018-08-14T21:24:46.6096140+07:00 0HLG1U6GMRRHC:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-14T21:24:46.6976241+07:00 0HLG1U6GMRRHC:00000002 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" in 166.0707ms (afa2e885)
+2018-08-14T21:24:46.7066805+07:00 0HLG1U6GMRRHC:00000002 [INF] Request finished in 245.8274ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-14T21:24:48.8070500+07:00 0HLG1U6GMRRHA:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap/dist/css/bootstrap.css.map   (ca22a1cb)
+2018-08-14T21:24:48.8169472+07:00 0HLG1U6GMRRHA:00000005 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css.map"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map"' (27b0a520)
+2018-08-14T21:24:48.9235332+07:00 0HLG1U6GMRRHA:00000005 [INF] Request finished in 112.1439ms 200 text/plain (791a596a)

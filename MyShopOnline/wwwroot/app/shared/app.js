@@ -34,7 +34,7 @@
             hideDuration: 200,
             // padding between element and notification
             gap: 2
-        })
+        });
     },
     confirm: function (message, okCallback) {
         bootbox.confirm({
@@ -137,3 +137,9 @@
         return roots;
     }
 }
+$(document).ajaxSend(function (e, xhr, options) {
+    if (options.type.toUpperCase() == "POST" || options.type.toUpperCase() == "PUT") {
+        var token = $('form').find("input[name='__RequestVerificationToken']").val();
+        xhr.setRequestHeader("RequestVerificationToken", token);
+    }
+});

@@ -1,0 +1,263 @@
+2018-08-16T21:51:01.7672825+07:00 0HLG2N22LOK4V:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:44354/admin/login/authen  0 (ca22a1cb)
+2018-08-16T21:51:01.8050249+07:00 0HLG2N22LOK4V:00000001 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" with arguments (["MyShopOnline.Models.AccountViewModels.LoginViewModel"]) - ModelState is Invalid (ba7f4ac2)
+2018-08-16T21:55:11.5010288+07:00  [INF] Entity Framework Core "2.0.2-rtm-10011" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=MyShopOnline.Data.EF " (9958f5bb)
+2018-08-16T21:55:12.0859657+07:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRole] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-16T21:55:12.1205006+07:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUser] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-16T21:55:12.1481909+07:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-08-16T21:55:12.1844955+07:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2018-08-16T21:55:12.1935071+07:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-08-16T21:55:12.2696865+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2018-08-16T21:55:12.3210058+07:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2018-08-16T21:55:12.3401848+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-08-16T21:55:12.3667974+07:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-08-16T21:55:12.4944805+07:00  [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-16T21:55:12.5206586+07:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-16T21:55:12.5320316+07:00  [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-16T21:55:12.8565741+07:00 0HLG3H12FJUJ2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin/login   (ca22a1cb)
+2018-08-16T21:55:13.1928849+07:00 0HLG3H12FJUJ2:00000001 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-16T21:55:19.6373160+07:00 0HLG3H12FJUJ2:00000001 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-16T21:55:19.9288818+07:00 0HLG3H12FJUJ2:00000001 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" in 6748.8636ms (afa2e885)
+2018-08-16T21:55:19.9754423+07:00 0HLG3H12FJUJ2:00000001 [INF] Request finished in 7132.6406ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-16T21:55:20.1089400+07:00 0HLG3H12FJUJ3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/nprogress/nprogress.css   (ca22a1cb)
+2018-08-16T21:55:20.1160096+07:00 0HLG3H12FJUJ2:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/animate.css/animate.min.css   (ca22a1cb)
+2018-08-16T21:55:20.1216946+07:00 0HLG3H12FJUJ3:00000001 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2018-08-16T21:55:20.1216946+07:00 0HLG3H12FJUJ2:00000002 [INF] Sending file. Request path: '"/lib/animate.css/animate.min.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\animate.css\animate.min.css"' (27b0a520)
+2018-08-16T21:55:20.1289153+07:00 0HLG3H12FJUJ5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-08-16T21:55:20.1317206+07:00 0HLG3H12FJUJ5:00000001 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-08-16T21:55:20.1482589+07:00 0HLG3H12FJUJ2:00000002 [INF] Request finished in 40.4376ms 200 text/css (791a596a)
+2018-08-16T21:55:20.1586582+07:00 0HLG3H12FJUJ4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2018-08-16T21:55:20.1603234+07:00 0HLG3H12FJUJ4:00000001 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2018-08-16T21:55:20.1648905+07:00 0HLG3H12FJUJ7:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin-side/css/custom.css   (ca22a1cb)
+2018-08-16T21:55:20.1667913+07:00 0HLG3H12FJUJ7:00000001 [INF] Sending file. Request path: '"/admin-side/css/custom.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\admin-side\css\custom.css"' (27b0a520)
+2018-08-16T21:55:20.1894838+07:00 0HLG3H12FJUJ6:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/notifyjs-browser/styles/metro/notify-metro.js   (ca22a1cb)
+2018-08-16T21:55:20.1909258+07:00 0HLG3H12FJUJ6:00000001 [INF] Sending file. Request path: '"/lib/notifyjs-browser/styles/metro/notify-metro.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\notifyjs-browser\styles\metro\notify-metro.js"' (27b0a520)
+2018-08-16T21:55:20.1918897+07:00 0HLG3H12FJUJ6:00000001 [INF] Request finished in 2.4503ms 200 application/javascript (791a596a)
+2018-08-16T21:55:20.1927035+07:00 0HLG3H12FJUJ8:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-08-16T21:55:20.1941498+07:00 0HLG3H12FJUJ8:00000001 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-08-16T21:55:20.2168795+07:00 0HLG3H12FJUJ3:00000001 [INF] Request finished in 108.7456ms 200 text/css (791a596a)
+2018-08-16T21:55:20.2175624+07:00 0HLG3H12FJUJ9:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/notifyjs-browser/notify.js   (ca22a1cb)
+2018-08-16T21:55:20.2189531+07:00 0HLG3H12FJUJ9:00000001 [INF] Sending file. Request path: '"/lib/notifyjs-browser/notify.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\notifyjs-browser\notify.js"' (27b0a520)
+2018-08-16T21:55:20.2224096+07:00 0HLG3H12FJUJ4:00000001 [INF] Request finished in 63.8455ms 200 text/css (791a596a)
+2018-08-16T21:55:20.2252731+07:00 0HLG3H12FJUJ7:00000001 [INF] Request finished in 60.3817ms 200 text/css (791a596a)
+2018-08-16T21:55:20.2421959+07:00 0HLG3H12FJUJ5:00000001 [INF] Request finished in 113.621ms 200 text/css (791a596a)
+2018-08-16T21:55:20.2668132+07:00 0HLG3H12FJUJA:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/notifyjs-browser/styles/metro/notify-metro.css   (ca22a1cb)
+2018-08-16T21:55:20.2690403+07:00 0HLG3H12FJUJA:00000001 [INF] Sending file. Request path: '"/lib/notifyjs-browser/styles/metro/notify-metro.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\notifyjs-browser\styles\metro\notify-metro.css"' (27b0a520)
+2018-08-16T21:55:20.2895296+07:00 0HLG3H12FJUJB:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/shared/app.js   (ca22a1cb)
+2018-08-16T21:55:20.2950765+07:00 0HLG3H12FJUJB:00000001 [INF] Sending file. Request path: '"/app/shared/app.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\shared\app.js"' (27b0a520)
+2018-08-16T21:55:20.2958647+07:00 0HLG3H12FJUJ9:00000001 [INF] Request finished in 78.3236ms 200 application/javascript (791a596a)
+2018-08-16T21:55:20.3072607+07:00 0HLG3H12FJUJA:00000001 [INF] Request finished in 40.4466ms 200 text/css (791a596a)
+2018-08-16T21:55:20.4232214+07:00 0HLG3H12FJUJB:00000001 [INF] Request finished in 134.204ms 200 application/javascript (791a596a)
+2018-08-16T21:55:20.5025812+07:00 0HLG3H12FJUJ8:00000001 [INF] Request finished in 309.5629ms 200 application/javascript (791a596a)
+2018-08-16T21:55:20.5214015+07:00 0HLG3H12FJUJ6:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/controllers/login/index.js   (ca22a1cb)
+2018-08-16T21:55:20.5247430+07:00 0HLG3H12FJUJ6:00000002 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2018-08-16T21:55:20.5710615+07:00 0HLG3H12FJUJ6:00000002 [INF] Request finished in 49.8452ms 200 application/javascript (791a596a)
+2018-08-16T21:55:21.0114322+07:00 0HLG3H12FJUJ2:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2018-08-16T21:55:21.0136289+07:00 0HLG3H12FJUJ2:00000003 [INF] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2018-08-16T21:55:21.0595019+07:00 0HLG3H12FJUJ2:00000003 [INF] Request finished in 49.4526ms 200 font/woff2 (791a596a)
+2018-08-16T21:55:21.5283834+07:00 0HLG3H12FJUJ4:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap/dist/css/bootstrap.css.map   (ca22a1cb)
+2018-08-16T21:55:21.5303634+07:00 0HLG3H12FJUJ4:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css.map"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map"' (27b0a520)
+2018-08-16T21:55:21.5488039+07:00 0HLG3H12FJUJ4:00000002 [INF] Request finished in 20.5573ms 200 text/plain (791a596a)
+2018-08-16T21:55:22.5311972+07:00 0HLG3H12FJUJ3:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/__browserLink/requestData/b15eec9898d7444ba9ae96e96b24e675?version=2   (ca22a1cb)
+2018-08-16T21:55:22.5410012+07:00 0HLG3H12FJUJ3:00000002 [INF] Request finished in 10.3817ms 404  (791a596a)
+2018-08-16T21:57:57.0179369+07:00  [INF] Entity Framework Core "2.0.2-rtm-10011" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=MyShopOnline.Data.EF " (9958f5bb)
+2018-08-16T21:57:57.7642176+07:00  [INF] Executed DbCommand ("32"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRole] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-16T21:57:57.8378933+07:00  [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUser] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-16T21:57:57.9028671+07:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-08-16T21:57:58.0081732+07:00  [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2018-08-16T21:57:58.0318509+07:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-08-16T21:57:58.1833904+07:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2018-08-16T21:57:58.2816111+07:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2018-08-16T21:57:58.3616521+07:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-08-16T21:57:58.4107101+07:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-08-16T21:57:58.5773507+07:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-16T21:57:58.6137485+07:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-16T21:57:58.6321261+07:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-16T21:57:59.2473558+07:00 0HLG3H2K08KJI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/   (ca22a1cb)
+2018-08-16T21:57:59.2470030+07:00 0HLG3H2K08KJJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin/login   (ca22a1cb)
+2018-08-16T21:57:59.7981595+07:00 0HLG3H2K08KJI:00000001 [INF] Executing action method "MyShopOnline.Controllers.HomeController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-16T21:57:59.8024175+07:00 0HLG3H2K08KJJ:00000001 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-16T21:58:07.2493033+07:00 0HLG3H2K08KJI:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-08-16T21:58:07.2525058+07:00 0HLG3H2K08KJJ:00000001 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-16T21:58:07.7470083+07:00 0HLG3H2K08KJJ:00000001 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Index (MyShopOnline)" in 7938.7202ms (afa2e885)
+2018-08-16T21:58:07.9582052+07:00 0HLG3H2K08KJJ:00000001 [INF] Request finished in 8620.1059ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-16T21:58:08.0544352+07:00 0HLG3H2K08KJM:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/notifyjs-browser/notify.js   (ca22a1cb)
+2018-08-16T21:58:08.0700956+07:00 0HLG3H2K08KJL:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/controllers/login/index.js   (ca22a1cb)
+2018-08-16T21:58:08.0930926+07:00 0HLG3H2K08KJN:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/app/shared/app.js   (ca22a1cb)
+2018-08-16T21:58:08.1612309+07:00 0HLG3H2K08KJJ:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/notifyjs-browser/styles/metro/notify-metro.js   (ca22a1cb)
+2018-08-16T21:58:08.2192704+07:00 0HLG3H2K08KJM:00000001 [INF] The file "/lib/notifyjs-browser/notify.js" was not modified (f1f8d725)
+2018-08-16T21:58:08.2463718+07:00 0HLG3H2K08KJL:00000001 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2018-08-16T21:58:08.3005896+07:00 0HLG3H2K08KJO:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2018-08-16T21:58:08.3180068+07:00 0HLG3H2K08KJM:00000001 [INF] Request finished in 275.9118ms 304 application/javascript (791a596a)
+2018-08-16T21:58:08.3233800+07:00 0HLG3H2K08KJN:00000001 [INF] Sending file. Request path: '"/app/shared/app.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\app\shared\app.js"' (27b0a520)
+2018-08-16T21:58:08.3338387+07:00 0HLG3H2K08KJL:00000001 [INF] Request finished in 317.2736ms 200 application/javascript (791a596a)
+2018-08-16T21:58:08.3519042+07:00 0HLG3H2K08KJJ:00000002 [INF] The file "/lib/notifyjs-browser/styles/metro/notify-metro.js" was not modified (f1f8d725)
+2018-08-16T21:58:08.4648633+07:00 0HLG3H2K08KJO:00000001 [INF] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2018-08-16T21:58:08.6070145+07:00 0HLG3H2K08KJO:00000001 [INF] Request finished in 275.7035ms 200 font/woff2 (791a596a)
+2018-08-16T21:58:08.6868053+07:00 0HLG3H2K08KJN:00000001 [INF] Request finished in 433.3779ms 200 application/javascript (791a596a)
+2018-08-16T21:58:08.7110839+07:00 0HLG3H2K08KJJ:00000002 [INF] Request finished in 322.8354ms 304 application/javascript (791a596a)
+2018-08-16T21:58:08.7393871+07:00 0HLG3H2K08KJM:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/favicon.ico   (ca22a1cb)
+2018-08-16T21:58:08.7583788+07:00 0HLG3H2K08KJM:00000002 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\favicon.ico"' (27b0a520)
+2018-08-16T21:58:08.8040049+07:00 0HLG3H2K08KJM:00000002 [INF] Request finished in 68.4892ms 200 image/x-icon (791a596a)
+2018-08-16T21:58:10.1567274+07:00 0HLG3H2K08KJI:00000001 [INF] Executed action "MyShopOnline.Controllers.HomeController.Index (MyShopOnline)" in 10395.2384ms (afa2e885)
+2018-08-16T21:58:10.3079176+07:00 0HLG3H2K08KJI:00000001 [INF] Request finished in 11102.5714ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-16T21:58:18.7608048+07:00 0HLG3H2K08KJL:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44354/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 30 (ca22a1cb)
+2018-08-16T21:58:18.9671386+07:00 0HLG3H2K08KJL:00000002 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" with arguments (["MyShopOnline.Models.AccountViewModels.LoginViewModel"]) - ModelState is Valid (ba7f4ac2)
+2018-08-16T21:58:19.0185600+07:00 0HLG3H2K08KJL:00000002 [INF] Entity Framework Core "2.0.2-rtm-10011" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=MyShopOnline.Data.EF " (9958f5bb)
+2018-08-16T21:58:19.2141156+07:00 0HLG3H2K08KJL:00000002 [INF] Executed DbCommand ("98"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avartar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUser] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-16T21:58:19.4711008+07:00 0HLG3H2K08KJL:00000002 [INF] Executed DbCommand ("9"ms) [Parameters=["@__user_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-08-16T21:58:19.6166179+07:00 0HLG3H2K08KJL:00000002 [INF] Executed DbCommand ("59"ms) [Parameters=["@__userId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRole] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-16T21:58:19.6595889+07:00 0HLG3H2K08KJL:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRole] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-16T21:58:19.7181887+07:00 0HLG3H2K08KJL:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__role_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-08-16T21:58:19.7407683+07:00 0HLG3H2K08KJL:00000002 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-08-16T21:58:19.7550419+07:00 0HLG3H2K08KJL:00000002 [INF] User logged in. (fdce0db4)
+2018-08-16T21:58:19.7711616+07:00 0HLG3H2K08KJL:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-16T21:58:19.8796370+07:00 0HLG3H2K08KJL:00000002 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.LoginController.Authen (MyShopOnline)" in 1020.751ms (afa2e885)
+2018-08-16T21:58:19.8916194+07:00 0HLG3H2K08KJL:00000002 [INF] Request finished in 1128.4557ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-16T21:58:19.9211014+07:00 0HLG3H2K08KJJ:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44354/Admin/Home/Index   (ca22a1cb)
+2018-08-16T21:58:19.9377677+07:00 0HLG3H2K08KJJ:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-08-16T21:58:19.9501464+07:00 0HLG3H2K08KJJ:00000003 [INF] Executing action method "MyShopOnline.Areas.Admin.Controllers.HomeController.Index (MyShopOnline)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-16T21:58:20.4740699+07:00 0HLG3H2K08KJJ:00000003 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Home/Index.cshtml". (9707eebe)
+2018-08-16T21:58:21.0635884+07:00 0HLG3H2K08KJJ:00000003 [INF] Executed action "MyShopOnline.Areas.Admin.Controllers.HomeController.Index (MyShopOnline)" in 1114.9317ms (afa2e885)
+2018-08-16T21:58:21.6305986+07:00 0HLG3H2K08KJJ:00000003 [INF] Request finished in 1690.5555ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-16T21:58:21.7321390+07:00 0HLG3H2K08KJN:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin-side/images/img.jpg   (ca22a1cb)
+2018-08-16T21:58:21.8041452+07:00 0HLG3H2K08KJN:00000002 [INF] Sending file. Request path: '"/admin-side/images/img.jpg"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\admin-side\images\img.jpg"' (27b0a520)
+2018-08-16T21:58:21.8506309+07:00 0HLG3H2K08KJO:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap-daterangepicker/daterangepicker.css   (ca22a1cb)
+2018-08-16T21:58:21.8818197+07:00 0HLG3H2K08KJQ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/admin-side/js/custom.js   (ca22a1cb)
+2018-08-16T21:58:21.9219520+07:00 0HLG3H2K08KJJ:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/chart.js/dist/Chart.js   (ca22a1cb)
+2018-08-16T21:58:21.9350829+07:00 0HLG3H2K08KJO:00000002 [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.css"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.css"' (27b0a520)
+2018-08-16T21:58:21.9839472+07:00 0HLG3H2K08KJL:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/moment/moment.js   (ca22a1cb)
+2018-08-16T21:58:22.0734838+07:00 0HLG3H2K08KJP:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootstrap-daterangepicker/daterangepicker.js   (ca22a1cb)
+2018-08-16T21:58:22.1165300+07:00 0HLG3H2K08KJI:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/nprogress/nprogress.js   (ca22a1cb)
+2018-08-16T21:58:22.1265641+07:00 0HLG3H2K08KJN:00000002 [INF] Request finished in 199.0905ms 200 image/jpeg (791a596a)
+2018-08-16T21:58:22.1453659+07:00 0HLG3H2K08KJJ:00000004 [INF] Sending file. Request path: '"/lib/chart.js/dist/Chart.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\chart.js\dist\Chart.js"' (27b0a520)
+2018-08-16T21:58:22.1840212+07:00 0HLG3H2K08KJM:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/fastclick/lib/fastclick.js   (ca22a1cb)
+2018-08-16T21:58:22.2472100+07:00 0HLG3H2K08KJR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/bootbox/bootbox.js   (ca22a1cb)
+2018-08-16T21:58:22.4001658+07:00 0HLG3H2K08KJP:00000001 [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.js"' (27b0a520)
+2018-08-16T21:58:22.4308885+07:00 0HLG3H2K08KJQ:00000001 [INF] Sending file. Request path: '"/admin-side/js/custom.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\admin-side\js\custom.js"' (27b0a520)
+2018-08-16T21:58:22.4978995+07:00 0HLG3H2K08KJS:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44354/lib/jquery-sparkline/jquery.sparkline.js   (ca22a1cb)
+2018-08-16T21:58:22.5021386+07:00 0HLG3H2K08KJL:00000003 [INF] Sending file. Request path: '"/lib/moment/moment.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\moment\moment.js"' (27b0a520)
+2018-08-16T21:58:22.5446229+07:00 0HLG3H2K08KJO:00000002 [INF] Request finished in 255.056ms 200 text/css (791a596a)
+2018-08-16T21:58:22.5761015+07:00 0HLG3H2K08KJI:00000002 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\nprogress\nprogress.js"' (27b0a520)
+2018-08-16T21:58:22.5918592+07:00 0HLG3H2K08KJS:00000001 [INF] Sending file. Request path: '"/lib/jquery-sparkline/jquery.sparkline.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\jquery-sparkline\jquery.sparkline.js"' (27b0a520)
+2018-08-16T21:58:22.7106940+07:00 0HLG3H2K08KJP:00000001 [INF] Request finished in 824.2566ms 200 application/javascript (791a596a)
+2018-08-16T21:58:22.7146577+07:00 0HLG3H2K08KJR:00000001 [INF] Sending file. Request path: '"/lib/bootbox/bootbox.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\bootbox\bootbox.js"' (27b0a520)
+2018-08-16T21:58:22.7785409+07:00 0HLG3H2K08KJM:00000003 [INF] Sending file. Request path: '"/lib/fastclick/lib/fastclick.js"'. Physical path: '"C:\NAM\ASP dotnet core\Projects\MyShopOnline\MyShopOnline\wwwroot\lib\fastclick\lib\fastclick.js"' (27b0a520)
+2018-08-16T21:58:22.8411156+07:00 0HLG3H2K08KJL:00000003 [INF] Request finished in 938.5496ms 200 application/javascript (791a596a)
+2018-08-16T21:58:22.8464122+07:00 0HLG3H2K08KJQ:00000001 [INF] Request finished in 859.8171ms 200 application/javascript (791a596a)
+2018-08-16T21:58:23.2891294+07:00 0HLG3H2K08KJR:00000001 [INF] Request finished in 981.642ms 200 application/javascript (791a596a)
+2018-08-16T21:58:23.2962666+07:00 0HLG3H2K08KJS:00000001 [INF] Request finished in 1128.2791ms 200 application/javascript (791a596a)
+2018-08-16T21:58:23.3071837+07:00 0HLG3H2K08KJI:00000002 [INF] Request finished in 1095.3306ms 200 application/javascript (791a596a)
+2018-08-16T21:58:23.3180452+07:00 0HLG3H2K08KJJ:00000004 [INF] Request finished in 1137.1568ms 200 application/javascript (791a596a)
+2018-08-16T21:58:23.3421225+07:00 0HLG3H2K08KJM:00000003 [INF] Request finished in 1146.4027ms 200 application/javascript (791a596a)

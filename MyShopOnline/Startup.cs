@@ -18,6 +18,8 @@ using MyShopOnline.Data.IRepositories;
 using MyShopOnline.Data.EF.Repositories;
 using MyShopOnline.Application.Interfaces;
 using MyShopOnline.Application.Implementation;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Serialization;
 
 namespace MyShopOnline
 {
@@ -73,12 +75,13 @@ namespace MyShopOnline
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
 
-            services.AddMvc();
+            services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddFile("Logs/Myshoponline-{Date}.txt");
             if (env.IsDevelopment())
             {
                 app.UseBrowserLink();
